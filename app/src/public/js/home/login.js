@@ -16,4 +16,12 @@ const id = document.querySelector("#id"),
             id : id.value,
             psword : psword.value,
         };
+
+        fetch("/login", {
+            method : "POST",
+            headers : {
+                "ContentType" : "application/json"
+            },
+            body : JSON.stringify(req),
+        });
     }
